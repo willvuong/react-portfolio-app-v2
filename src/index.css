@@ -1,0 +1,519 @@
+* {
+  margin: auto;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI';
+  width: 70%;
+}
+
+@media only screen and (max-width:1008px) {
+  body {
+    width: 100%;
+  }
+}
+
+@keyframes translateYContent {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes translateXContent {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleInContent {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 768px = tablet width */
+/* transform: scale(1.03); enlarge element*/
+
+/******************************* HEADER *******************************/
+.Header {
+  /* width: 100%; */
+  /* min-height: 10vh; */
+  /* padding-left: 10%; */
+  /* padding-right: 10%;
+  box-sizing: border-box;
+  overflow: hidden; */
+  /* border-bottom: 1px solid lightgray; */
+  /* margin-bottom: 2rem; */
+  font-size: 1.2rem;
+  margin: auto;
+  position: fixed;
+  width: 70%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.myLogo {
+  width: 130px;
+}
+
+.Navigation {
+  flex: 1; /* lets all the flexible items be the same length, regardless of its content */
+  text-align: right; /* navlinks go to right of header */
+}
+
+#navLinks li { /* remember to apply to 'li' specifically to affect the items within the ul #navLinks -> #navLinks li */
+  list-style-type: none; /* gets rid of bullet points on an <ul> */
+  display: inline-block; /* display links horizontally instead of verically */
+  padding: 1rem;
+}
+
+#navLinks li a { /* <Link /> in Navigation.js comes out as a tag within the dom (refer to in dev tools on chrome) */
+  text-decoration: none; /* removes underlined links */
+  color: black;
+  opacity: 1;
+}
+
+#navLinks li a:hover {
+  opacity: 0.6;
+  transition: 0.3s ease-in-out;
+}
+
+.navActive {
+  border-bottom: 1.5px black solid;
+}
+
+/******************* hamburger menu *******************/
+.MenuButton { 
+  display: none;
+}
+
+.NavigationResponsive {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  animation: translateYContent 0.5s;
+  position: absolute;
+  background: white;
+  z-index: 1;
+}
+
+#navLinksResponsive {
+  top: 20%;
+  position: relative;
+}
+
+#navLinksResponsive li {
+  list-style-type: none;
+  padding: 1rem;
+  font-size: 4rem;
+}
+
+#navLinksResponsive li a {
+  text-decoration: none;
+  color: black;
+  opacity: 0.6;  
+}
+
+#navLinksResponsive li a:hover {
+  opacity: 1;
+  transition: 0.3s ease-in-out;  
+}
+
+@media only screen and (max-width:1008px) { 
+  .MenuButton {
+    display:block;
+  }
+
+  #navLinks li {
+    display:none;
+  }
+
+  .NavigationResponsive {
+    display: block;
+  }
+}
+
+/******************* hamburger menu *******************/
+
+/******************************* HEADER *******************************/
+
+
+/******************************* HOME *******************************/
+.Home {
+  width: 95%;
+  font-size: 1.4rem;
+  margin-top: 150px
+}
+
+.bioContainer {
+  animation: translateYContent 1s;
+  margin: 1rem;
+  display: flex;
+  background: #fbb03b;
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+.bio {
+  width: 50%;
+}
+
+#webDevImg {
+  width: 50%;
+  height: 475px;
+}
+
+.aboutMeContainer {
+  animation: translateYContent 1s;
+  animation-delay: .3s;
+  animation-fill-mode: backwards;
+  display: flex;
+  margin: 1rem;
+  /* background: #4a90e2; */
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+.aboutMe {
+  margin-top: 5rem;
+  animation: translateYContent 2s;
+  width: 100%;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#portfolioImg {
+  height: 275px;
+  width: 25%;
+  border-radius: 30%;
+  margin: 1rem;
+  box-shadow: 0 0 20px #ddd;
+} 
+
+@media only screen and (max-width:1200px) { 
+  .aboutMeContainer {
+    display: block;
+    text-align: center;
+  } 
+
+  .aboutMe {
+    margin: 0;
+  }
+
+  #portfolioImg {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width:850px) {
+  .bioContainer {
+    display: block;
+    text-align: center;
+  }
+
+  #webDevImg {
+    width: 100%;
+    margin-top: 1rem;
+  }  
+  
+  #portfolioImg {
+    width: 40%;
+  }
+
+}
+@media only screen and (max-width:750px) {
+  #portfolioImg {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width:600px) {
+  #portfolioImg {
+    width: 60%;
+  }
+}
+
+/******************************* HOME *******************************/
+
+
+
+/******************************* ABOUT *******************************/
+.About {
+  width: 95%;
+  font-size: 1.4rem;
+}
+
+.About h2 {
+  font-size: 2rem;
+  animation: translateXContent 1s;
+}
+
+.AboutItem {
+  margin: 1rem;
+  padding-bottom: 2rem;
+  animation: translateYContent 0.5s linear;
+  animation-fill-mode: backwards;
+}
+
+/* .AboutItem:hover {
+  transform: scale(1.02);
+  transition: 0.2s ease-in-out;
+} */
+
+.AboutItem h3 {
+  display: inline-block;
+}
+
+.AboutItem i {
+  padding-right: 1rem;
+  color: black;
+}
+
+.AboutItem:nth-child(3) { animation-delay: .3s }
+.AboutItem:nth-child(4) { animation-delay: .6s }
+.AboutItem:nth-child(5) { animation-delay: .9s }
+.AboutItem:nth-child(6) { animation-delay: 1.2s }
+.AboutItem:nth-child(7) { animation-delay: 1.5s } 
+
+.resume {
+  text-align: center;
+  padding: 2rem;
+  animation: scaleInContent 1s;
+  animation-delay: 1.6s;
+  animation-fill-mode: backwards;
+}
+
+.resume a {
+  text-decoration: none;
+  color: black;
+  opacity: 0.7;
+  font-size: 2.2rem;
+}
+
+.resume a:hover {
+  opacity: 1;
+  transition: 1s;
+}
+
+.resume:hover {
+  transform: scale(1.05);
+  transition: 0.2s ease-in-out;
+}
+/******************************* ABOUT *******************************/
+
+/******************************* PROJECTS *******************************/
+.Projects h2{
+  font-size: 2rem;
+  padding-left: 2.5%;
+  animation: translateXContent 1s;
+}
+
+.ProjectsItem {
+  animation: translateYContent 0.5s linear;
+  animation-fill-mode: backwards;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  width: 50%;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.ProjectsItem h3 {
+  font-size: 1.4rem;
+}
+
+.ProjectsItem:nth-child(3) { animation-delay: .3s }
+.ProjectsItem:nth-child(4) { animation-delay: .6s }
+.ProjectsItem:nth-child(5) { animation-delay: .9s }
+.ProjectsItem:nth-child(6) { animation-delay: 1.2s }
+.ProjectsItem:nth-child(7) { animation-delay: 1.5s } 
+
+.projectImgContainer {
+  height: 500px;
+  position: relative;
+}  
+
+.projectImgContainer img{
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+} 
+
+.projectInfo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  display: none;
+}
+
+.projectInfo a {
+  text-decoration: none;
+}
+
+.projectLinks {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.projectLinks a {
+  margin-left: 1rem;
+}
+
+.projectLinks a, .projectLinks i {
+  color: white; 
+}
+
+.projectLinks a:hover {
+  opacity: 0.6;
+  transition: 0.3s ease-in-out;
+}
+
+.projectImgContainer:hover > .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    border-radius: 15px;
+    background-color:black;
+    opacity:0.7;
+    transition: 0.5s ease-out;
+}
+
+.projectImgContainer:hover .projectInfo {
+  display: block;
+}
+
+@media only screen and (max-width:1400px) {
+  .ProjectsItem {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .projectImgContainer {
+    height: 350px;
+    font-size: 0.75rem;
+  }
+  
+/* button */
+/* .projectButtons button {
+  background-color: rgb(117, 200, 255);
+  border-radius: 12px;
+  margin-top: 1rem;
+  margin-left: 1rem;
+} */
+
+/* .projectImgContainer img:hover {
+  opacity: 0.5;
+  transition: 0.3s ease-in-out;
+} 
+
+/* .projectInfo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: 0.7s ease-in-out;
+  display: none;
+  z-index: 1;
+  border: red 1px solid;
+  z-index: 1;
+} 
+
+.projectImgContainer img:hover + .projectInfo {
+  display: block;
+}
+
+.projectInfo:hover > .projectImgContainer img {
+  opacity: 0.2;
+  transition: 0.3s ease-in-out;
+} */
+
+
+}
+/******************************* PROJECTS *******************************/
+
+/******************************* FOOTER *******************************/
+.Footer {
+  border-top: 1px solid lightgray;
+  margin-top: 1rem;
+  text-align: center;
+  /* padding: 1rem; */
+  padding-top: 1rem;
+  /* opacity: 0.6; */
+  /* font-size: 1.2rem; */
+  position: absolute;
+  left: 0;
+  color: white;
+  width: 100%;
+  background-color: #17a2b8;
+}
+
+#contactLinks {
+  list-style-type: none; /* gets rid of bullet points on an <ul> */
+  padding: 0; /* list have padding by default */ 
+}
+
+#contactLinks li{
+  display: inline-block;
+  padding: 7px;
+}
+
+.Footer i, .Footer p {
+  color: white;
+  opacity: 0.6;
+} 
+
+.contactIcons .fab:hover, .contactIcons .fas:hover {
+  opacity: 1;
+  transform: scale(1.1); /* expands the elements 1.1 its size */
+  transition: 0.2s ease-in-out; /* smothens the transition a bit; animation duration = 0.2s */
+  /* font-size: 2.2em; this makes all div elements movie in accordance to the one expanding  */
+}
+
+.MenuButton .fab:hover, .MenuButton .fas:hover {
+  opacity: 1;
+  transform: scale(1.1); /* expands the elements 1.1 its size */
+  transition: 0.2s ease-in-out; /* smothens the transition a bit; animation duration = 0.2s */
+}
+
+#copyright {
+  padding: 0.5rem;
+  font-size: 12px;
+}
+/******************************* FOOTER *******************************/
+
