@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 
 const Navigation = () => {
     const [activeTab, setActiveTab] = useState('')
@@ -17,8 +16,15 @@ const Navigation = () => {
     return (
         <nav className="Navigation">
             <ul id="navLinks">
-                <li className={activeTab === 'About' ? "navActive" : ""}><Link to='/about' onClick={() => setActiveTab('About')}>About</Link></li>
-                <li className={activeTab === 'Projects' ? "navActive" : ""}><Link to='/projects' onClick={() => setActiveTab('Projects')}>Projects</Link></li>
+                {/* <li className={activeTab === 'About' ? "navActive" : ""}><Link to='/about' onClick={() => setActiveTab('About')}>About</Link></li>
+                <li className={activeTab === 'Projects' ? "navActive" : ""}><Link to='/projects' onClick={() => setActiveTab('Projects')}>Projects</Link></li> */}
+
+                <li className={activeTab === 'About' ? "navActive" : ""}>
+                    <a href="#about">About</a>
+                </li>
+                <li className={activeTab === 'Projects' ? "navActive" : ""}>
+                    <a href="#projects">Projects</a>
+                </li>
             </ul>
             {/* {activeTab} */}
         </nav>

@@ -3,8 +3,8 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI';
-  width: 70%;
+  font-family: Montserrat, BlinkMacSystemFont, 'Segoe UI';
+  width: 100%;
 }
 
 @media only screen and (max-width:1008px) {
@@ -52,6 +52,15 @@ body {
 /* 768px = tablet width */
 /* transform: scale(1.03); enlarge element*/
 
+.headerContainer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.headerContainer h3 {
+  color: #0db3c7;
+}
+
 /******************************* HEADER *******************************/
 .Header {
   /* width: 100%; */
@@ -65,7 +74,7 @@ body {
   font-size: 1.2rem;
   margin: auto;
   position: fixed;
-  width: 70%;
+  width: 60%;
   top: 0;
   left: 0;
   right: 0;
@@ -169,18 +178,21 @@ body {
 
 /******************************* HOME *******************************/
 .Home {
-  width: 95%;
   font-size: 1.4rem;
-  margin-top: 150px
+  margin-top: 150px;
 }
 
 .bioContainer {
-  animation: translateYContent 1s;
-  margin: 1rem;
-  display: flex;
   background: #fbb03b;
-  border-radius: 15px;
-  padding: 1rem;
+  padding: 10rem 0;
+}
+
+.innerBioContainer {
+  animation: translateYContent 1s;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .bio {
@@ -197,10 +209,11 @@ body {
   animation-delay: .3s;
   animation-fill-mode: backwards;
   display: flex;
-  margin: 1rem;
+  width: 60%;
+  margin: 0 auto;
   /* background: #4a90e2; */
   border-radius: 15px;
-  padding: 1rem;
+  padding: 10rem 0;
 }
 
 .aboutMe {
@@ -237,7 +250,7 @@ body {
 }
 
 @media only screen and (max-width:850px) {
-  .bioContainer {
+  .innerBioContainer { /* change to .container*/
     display: block;
     text-align: center;
   }
@@ -270,14 +283,20 @@ body {
 
 /******************************* ABOUT *******************************/
 .About {
-  width: 95%;
   font-size: 1.4rem;
+  background-color: rgb(250, 250, 250);
+  padding: 10rem 0;
 }
 
-.About h2 {
+.aboutContainer {
+  width: 60%;
+  margin: 0 auto;
+}
+
+/* .About h2 {
   font-size: 2rem;
   animation: translateXContent 1s;
-}
+} */
 
 .AboutItem {
   margin: 1rem;
@@ -308,7 +327,7 @@ body {
 
 .resume {
   text-align: center;
-  padding: 2rem;
+  /* padding: 2rem; */
   animation: scaleInContent 1s;
   animation-delay: 1.6s;
   animation-fill-mode: backwards;
@@ -333,11 +352,20 @@ body {
 /******************************* ABOUT *******************************/
 
 /******************************* PROJECTS *******************************/
-.Projects h2{
+.Projects {
+  padding: 10rem 0;
+}
+
+.projectsContainer {
+  width: 60%;
+  margin: 0 auto;
+}
+
+/* .Projects h2{
   font-size: 2rem;
   padding-left: 2.5%;
   animation: translateXContent 1s;
-}
+} */
 
 .ProjectsItem {
   animation: translateYContent 0.5s linear;
@@ -349,9 +377,12 @@ body {
   overflow: hidden;
 }
 
-.ProjectsItem h3 {
+/* .ProjectsItem h3 {
   font-size: 1.4rem;
-}
+  text-align: center;
+  padding-bottom: 0.5rem;
+} */
+/* markeeee*/
 
 .ProjectsItem:nth-child(3) { animation-delay: .3s }
 .ProjectsItem:nth-child(4) { animation-delay: .6s }
@@ -359,12 +390,12 @@ body {
 .ProjectsItem:nth-child(6) { animation-delay: 1.2s }
 .ProjectsItem:nth-child(7) { animation-delay: 1.5s } 
 
-.projectImgContainer {
+.innerProjectsContainer {
   height: 500px;
   position: relative;
 }  
 
-.projectImgContainer img{
+.innerProjectsContainer img{
   border-radius: 15px;
   height: 100%;
   width: 100%;
@@ -401,7 +432,7 @@ body {
   transition: 0.3s ease-in-out;
 }
 
-.projectImgContainer:hover > .overlay {
+.innerProjectsContainer:hover > .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -413,7 +444,7 @@ body {
     transition: 0.5s ease-out;
 }
 
-.projectImgContainer:hover .projectInfo {
+.innerProjectsContainer:hover .projectInfo {
   display: block;
 }
 
@@ -424,45 +455,10 @@ body {
 }
 
 @media only screen and (max-width:500px) {
-  .projectImgContainer {
+  .innerProjectsContainer {
     height: 350px;
     font-size: 0.75rem;
   }
-  
-/* button */
-/* .projectButtons button {
-  background-color: rgb(117, 200, 255);
-  border-radius: 12px;
-  margin-top: 1rem;
-  margin-left: 1rem;
-} */
-
-/* .projectImgContainer img:hover {
-  opacity: 0.5;
-  transition: 0.3s ease-in-out;
-} 
-
-/* .projectInfo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  transition: 0.7s ease-in-out;
-  display: none;
-  z-index: 1;
-  border: red 1px solid;
-  z-index: 1;
-} 
-
-.projectImgContainer img:hover + .projectInfo {
-  display: block;
-}
-
-.projectInfo:hover > .projectImgContainer img {
-  opacity: 0.2;
-  transition: 0.3s ease-in-out;
-} */
-
 
 }
 /******************************* PROJECTS *******************************/
@@ -470,17 +466,13 @@ body {
 /******************************* FOOTER *******************************/
 .Footer {
   border-top: 1px solid lightgray;
-  margin-top: 1rem;
   text-align: center;
-  /* padding: 1rem; */
   padding-top: 1rem;
-  /* opacity: 0.6; */
-  /* font-size: 1.2rem; */
   position: absolute;
   left: 0;
   color: white;
   width: 100%;
-  background-color: #17a2b8;
+  background-color: black;
 }
 
 #contactLinks {

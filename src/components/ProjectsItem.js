@@ -3,11 +3,12 @@ const ProjectsItem = ({ projectsData }) => {
     return (
         <div className="ProjectsItem">
 
-            <div className="projectImgContainer">
+            <div className="innerProjectsContainer">
                 <img src={projectsData.img} ></img>
                 <div className="overlay"></div> {/* specifically for dark background on hover */}
 
                 <div className="projectInfo">
+                    <h3>{projectsData.name}</h3>
                     <p>{projectsData.description}</p>
 
                     <div className="projectLinks">
@@ -16,8 +17,6 @@ const ProjectsItem = ({ projectsData }) => {
                     </div>
                 </div>
             </div>
-
-            <h3>{projectsData.name}</h3>
 
         </div>
     )

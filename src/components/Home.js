@@ -6,11 +6,13 @@ const Home = () => {
             <title>William Vuong</title>
 
             <div className="bioContainer">
+                <div className="innerBioContainer">
                 <div className="bio">
                     <h2>HELLO, I'M WILLIAM.</h2>
                     <p>Web Programmer based in the Greater Toronto Area.</p>
                 </div>
                 <img id="webDevImg" src="webdev.png" alt="webdev" />
+                </div>
             </div>
 
             <div className="aboutMeContainer">

@@ -1,5 +1,3 @@
-import { BrowserRouter, Route, Switch, useLocation } from 'react-router-dom'
-
 import Header from './components/Header.js'
 import Home from './components/Home.js'
 import About from './components/About.js'
@@ -12,7 +10,6 @@ import projectsData from './data/ProjectsData.js'
 import contactData from './data/ContactData'
 
 function App() {
-  const location = useLocation();
   return (
     <div className="App">
       <Header />
