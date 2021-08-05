@@ -52,9 +52,12 @@ body {
 /* 768px = tablet width */
 /* transform: scale(1.03); enlarge element*/
 
+
+/* 'About Me', 'My Skillset', and 'My Projects' headers */
 .headerContainer {
   text-align: center;
   margin-bottom: 2rem;
+  font-size: 1.4rem;
 }
 
 .headerContainer h3 {
@@ -63,29 +66,22 @@ body {
 
 /******************************* HEADER *******************************/
 .Header {
-  /* width: 100%; */
-  /* min-height: 10vh; */
-  /* padding-left: 10%; */
-  /* padding-right: 10%;
-  box-sizing: border-box;
-  overflow: hidden; */
-  /* border-bottom: 1px solid lightgray; */
-  /* margin-bottom: 2rem; */
   font-size: 1.2rem;
-  margin: auto;
   position: fixed;
-  width: 60%;
   top: 0;
   left: 0;
   right: 0;
   background-color: white;
-  z-index: 1;
+  z-index: 1; /* overlap all content */
+  box-shadow: 0px 0px 50px 2px #ddd;
+  /* box-shadow: 0px 0px 50px 2px rgb(250, 250, 250); */
 }
 
 .navbar {
-  width: 100%;
+  width: 60%;
   display: flex;
   align-items: center;
+  margin: auto;
 }
 
 .myLogo {
@@ -179,7 +175,7 @@ body {
 /******************************* HOME *******************************/
 .Home {
   font-size: 1.4rem;
-  margin-top: 150px;
+  margin-top: 135px;
 }
 
 .bioContainer {
@@ -205,15 +201,23 @@ body {
 }
 
 .aboutMeContainer {
-  animation: translateYContent 1s;
+  /* animation: translateYContent 1s;
   animation-delay: .3s;
   animation-fill-mode: backwards;
   display: flex;
   width: 60%;
   margin: 0 auto;
-  /* background: #4a90e2; */
+  background: #4a90e2;
   border-radius: 15px;
+  padding: 10rem 0; */
+  width: 60%;
+  margin: 0 auto;
   padding: 10rem 0;
+  
+}
+
+.innerAboutMeContainer {
+  display: flex;
 }
 
 .aboutMe {
@@ -234,8 +238,8 @@ body {
   box-shadow: 0 0 20px #ddd;
 } 
 
-@media only screen and (max-width:1200px) { 
-  .aboutMeContainer {
+@media only screen and (max-width:1600px) { 
+  .innerAboutMeContainer {
     display: block;
     text-align: center;
   } 
@@ -250,7 +254,7 @@ body {
 }
 
 @media only screen and (max-width:850px) {
-  .innerBioContainer { /* change to .container*/
+  .innerBioContainer {
     display: block;
     text-align: center;
   }
@@ -377,12 +381,11 @@ body {
   overflow: hidden;
 }
 
-/* .ProjectsItem h3 {
+.ProjectsItem h3 {
   font-size: 1.4rem;
   text-align: center;
   padding-bottom: 0.5rem;
-} */
-/* markeeee*/
+}
 
 .ProjectsItem:nth-child(3) { animation-delay: .3s }
 .ProjectsItem:nth-child(4) { animation-delay: .6s }
@@ -492,14 +495,14 @@ body {
 
 .contactIcons .fab:hover, .contactIcons .fas:hover {
   opacity: 1;
-  transform: scale(1.1); /* expands the elements 1.1 its size */
+  /* transform: scale(1.1);  */ /* expands the elements 1.1 its size */
   transition: 0.2s ease-in-out; /* smothens the transition a bit; animation duration = 0.2s */
   /* font-size: 2.2em; this makes all div elements movie in accordance to the one expanding  */
 }
 
 .MenuButton .fab:hover, .MenuButton .fas:hover {
   opacity: 1;
-  transform: scale(1.1); /* expands the elements 1.1 its size */
+  /* transform: scale(1.1);  */ /* expands the elements 1.1 its size */
   transition: 0.2s ease-in-out; /* smothens the transition a bit; animation duration = 0.2s */
 }
 

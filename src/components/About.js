@@ -5,8 +5,8 @@ const About = ({ aboutData }) => {
         <div className="About">
             <div className="aboutContainer">
                 <div className="headerContainer">
-                <h3>My Skillset</h3>
-                <h2>What I Can Offer.</h2>
+                    <h3>My Skillset</h3>
+                    <h2>Some Of The Skills I Offer.</h2>
                 </div>
                 {aboutData.length > 0 && aboutData.map((data) => (
                     <AboutItem

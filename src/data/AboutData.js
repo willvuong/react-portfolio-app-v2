@@ -3,7 +3,7 @@ const aboutData = [
         id: 1,
         title: "Web Development Tools",
         icon: "fas fa-code fa-2x",
-        description: "Experienced with front-end web development tools such as HTML, CSS, and JavaScript, to create appealing and meaningful web pages."
+        description: "Experienced with front-end web development tools such as HTML, CSS, and JavaScript, to create appealing and responsive web pages."
     },
     {
         id: 2,
