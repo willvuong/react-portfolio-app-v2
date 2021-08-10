@@ -13,13 +13,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* <BrowserRouter>
-      <Switch location={location} key={location.key}>
-          <Route exact path='/'><Home /></Route>
-          <Route exact path='/about'><About aboutData={aboutData}/></Route>
-          <Route exact path='/projects'><Projects projectsData={projectsData}/></Route>
-        </Switch>
-      </BrowserRouter> */}
       <Home />
       <About aboutData={aboutData}/>
       <Projects projectsData={projectsData}/>

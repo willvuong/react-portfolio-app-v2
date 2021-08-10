@@ -25,7 +25,7 @@ const projectsData = [
     {
         id: 3,
         name: "Movie Database App",
-        description: "An application that queries specific data from a movie database API. A useState hook is intialized as null which it is then used to store queried data that is entered in the search bar. All movies that match the query is first searched through the API -> converted to JSON objects -> results sent to the 'Movies' component as props -> sent to the 'Movie' component where the object's data is then destructured and rendered onto the page",
+        description: "An application that fetches queried data that is entered in the search bar from an API (https://api.themoviedb.org). Data from movies with matching queries are destructured and displayed in flexboxes when a hover event occurs",
         img: moviedb,
         demoLink: "https://wvmoviedb.netlify.app/",
         sourceCode: "https://github.com/willvuong/react-movie-app"
@@ -33,7 +33,7 @@ const projectsData = [
     {
         id: 4,
         name: "Hangman Game",
-        description: "Hangman game that records correct and wrong letters, and determines on whether you can play depending on whether you win or lose, through the use of React useStates and useEffect. React useStates are used as props to update what was being displayed on the screen (ie: wrongLetters that are entered updated the Figure component to render out a new body part)",
+        description: "Hangman game that records correct and wrong letters, and determines on whether you can play depending on whether you win or lose, through the use of React useStates and useEffect.",
         img: hangman, 
         demoLink: "https://wvhangman.netlify.app/",
         sourceCode: "https://github.com/willvuong/react-hangman-app" 
@@ -49,7 +49,7 @@ const projectsData = [
     {
         id: 6,
         name: "Studio 6ix: Barbershop Website",
-        description: "A business page that displays information about the barbershop's work, services offered, staff members, and contact information for a simple and meaningful way. This website was built on Wordpress and uses plugins that effectively displays information through a slideshow, Instagram feed, and Google map widget.",
+        description: "A business page that is made from WordPress and utilizes WordPress tools to create an intuitive website design that displays the services offered, staff members, and contact information of the business",
         img: studio,
         demoLink: "//www.studio6ix.ca",
         sourceCode: "//www.studio6ix.ca"

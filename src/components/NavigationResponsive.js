@@ -1,21 +1,20 @@
-import { Link } from 'react-router-dom'
-
 import { useCallback } from 'react'
 
 const NavigationResponsive = ( {setShowMenu} ) => {
     const closeNavigationResponsive = () => {
-        document.getElementById("navLinksResponsive").style.display = "none"
+        document.getElementByClassName("NavigationResponsive").style.display = "none"
     }
 
     const setShowMenuChange = useCallback(e => {
-        setShowMenu(e.target.value)
+       setShowMenu(e.target.value)
     },[setShowMenu])
 
     return (
         <nav className="NavigationResponsive">
             <ul id="navLinksResponsive">
-                <li><Link to='/about' onClick={closeNavigationResponsive && setShowMenuChange}>About</Link></li>
-                <li><Link to='/projects' onClick={closeNavigationResponsive && setShowMenuChange}>Projects</Link></li>
+                <li><a href='#about' onClick={closeNavigationResponsive && setShowMenuChange}>About</a></li>
+                <li><a href='#projects' onClick={closeNavigationResponsive && setShowMenuChange}>Projects</a></li>
+                <li><a href='#contact' onClick={closeNavigationResponsive && setShowMenuChange}>Contact</a></li>
             </ul>
         </nav>
     )

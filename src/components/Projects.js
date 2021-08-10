@@ -2,7 +2,7 @@ import ProjectsItem from './ProjectsItem.js'
 
 const Projects = ({ projectsData }) => {
     return (
-        <div className="Projects">
+        <div className="Projects" id="projects">
             <div className="projectsContainer">
                 <div className="headerContainer">
                     <h3>My Projects</h3>

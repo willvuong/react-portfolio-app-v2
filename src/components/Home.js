@@ -15,7 +15,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="aboutMeContainer">
+            <div className="aboutMeContainer" id="about">
                 <div className="headerContainer">
                     <h3>About Me</h3>
                     <h2>Who I Am.</h2>
