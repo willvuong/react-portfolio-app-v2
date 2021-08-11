@@ -205,15 +205,6 @@ html {
 }
 
 .aboutMeContainer {
-  /* animation: translateYContent 1s;
-  animation-delay: .3s;
-  animation-fill-mode: backwards;
-  display: flex;
-  width: 60%;
-  margin: 0 auto;
-  background: #4a90e2;
-  border-radius: 15px;
-  padding: 10rem 0; */
   width: 60%;
   margin: 0 auto;
   padding: 10rem 0;
@@ -516,3 +507,38 @@ html {
 }
 /******************************* FOOTER *******************************/
 
+
+/******************************* phone resonspiveness *******************************/
+
+@media only screen and (max-width:550px) {
+  
+  .navbar {
+    width: 90%;
+  }
+  .innerBioContainer {
+    width: 90%;
+  }
+  .aboutMeContainer {
+    width: 90%;
+  }
+  .aboutContainer {
+    width: 90%;
+  }
+  .projectsContainer {
+    width: 90%;
+  }
+
+
+  .bioContainer {
+    padding: 4rem 0;
+  }
+  .Projects {
+    padding: 4rem 0;
+  }
+  .About {
+    padding: 4rem 0;
+  }
+  .aboutMeContainer {
+    padding: 4rem 0;
+  }
+}
