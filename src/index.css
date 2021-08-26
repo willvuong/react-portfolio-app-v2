@@ -244,11 +244,17 @@ html {
   }
 
   #portfolioImg {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width:1300px) { 
+  #portfolioImg {
     width: 30%;
   }
 }
 
-@media only screen and (max-width:850px) {
+@media only screen and (max-width:900px) {
   .innerBioContainer {
     display: block;
     text-align: center;
@@ -465,7 +471,7 @@ html {
 .Footer {
   border-top: 1px solid lightgray;
   text-align: center;
-  padding-top: 1rem;
+  padding: 2rem 0;
   position: absolute;
   left: 0;
   color: white;
@@ -510,7 +516,7 @@ html {
 
 /******************************* phone resonspiveness *******************************/
 
-@media only screen and (max-width:550px) {
+@media only screen and (max-width:700px) {
   
   .navbar {
     width: 90%;
